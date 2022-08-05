@@ -1,0 +1,10 @@
+# shortcut function: higrep
+higrep() {
+  q="$1"
+  if [ -n "$q" ]
+  then
+    history | grep -i "$q"
+  else
+    history
+  fi
+}

@@ -3,3 +3,7 @@
 # ignore dotenv, because it could contain credentials
 # copy .env from a template for local use and customization
 #.env
+
+# ignore zsh history and cache patterns
+/config/zsh/.zsh_history
+/config/zsh/.zcompcache
