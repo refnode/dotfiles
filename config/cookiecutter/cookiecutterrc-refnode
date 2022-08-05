@@ -1,0 +1,19 @@
+default_context:
+  user_fullname: "Sven Wilhelm"
+  user_email: "refnode@gmail.com"
+  user_name: "refnode"
+  team_name: "refnode"
+  team_email: "refnode@gmail.com"
+  repository_namespace: "refnode"
+
+  container_registry_namespace: "refnode"
+
+  repository_enable_docs: "y"
+  repository_feature_markdown: "y"
+  repository_feature_asciidoc: "y"
+  repository_feature_toml: "y"
+  repository_feature_yaml: "y"
+  repository_feature_json: "y"
+  repository_feature_shell: "y"
+abbreviations:
+  refnode: git@github.com:refnode/cookiecutter-templates.git

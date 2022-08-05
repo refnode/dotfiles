@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cookiecutter \
+  --config-file="${DOTFILES}/config/cookiecutter/cookiecutterrc-refnode" "$*"
