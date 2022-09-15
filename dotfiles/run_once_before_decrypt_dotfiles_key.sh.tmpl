@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DOTFILES_KEY="${HOME}/.config/age/dotfiles-key.txt"
+
+if [ ! -f "${DOTFILES_KEY}" ]; then
+#  mkdir -p $(dirname "${DOTFILES_KEY}")
+#  chmod 0700 $(dirname "${DOTFILES_KEY}")
+  chezmoi apply ~/.config/age
+  age \
+    --decrypt \
+    --output "${DOTFILES_KEY}" \
+    "{{ .chezmoi.sourceDir }}/dot_config/private_age/dotfiles-key.txt.age"
+    chmod 600 "${DOTFILES_KEY}"
+fi

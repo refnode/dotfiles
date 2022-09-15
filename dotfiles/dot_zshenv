@@ -12,7 +12,7 @@
 export DOTFILES="${HOME}/.dotfiles"
 
 # Define ZDOTDIR to keep the majority of zsh config out of users home root
-export ZDOTDIR="${DOTFILES}/config/zsh"
+export ZDOTDIR="${HOME}/config/zsh"
 
 # If present source a workspace local zshenv file.
 if [ -s "${HOME}/.zshenv.local" ]; then
