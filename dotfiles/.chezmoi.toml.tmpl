@@ -1,0 +1,18 @@
+{{- $name := promptStringOnce . "name" "Please define the git user name" "Sven Wilhelm" }}
+{{- $email := promptStringOnce . "email" "Please define the git user email" "refnode@gmail.com" }}
+{{- $workplace := promptStringOnce . "workplace" "Please define the worplace type [private/business]" "private" }}
+
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+encryption = "age"
+
+[age]
+    identity = "~/.config/age/dotfiles-key.txt"
+    recipient = "age1l9v9jphuu06wgv0d5ht6kacan4t8u0l8fjufwck7glapmnwmudlqpmp60j"
+
+[diff]
+    exclude = ["scripts"]
+
+[data]
+    name = {{ $name | quote }}
+    email = {{ $email | quote }}
+    workplace = {{ $workplace | quote }}
