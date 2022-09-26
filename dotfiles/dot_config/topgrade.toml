@@ -1,0 +1,24 @@
+assume_yes = true
+
+only = [
+  "system",
+  "brew_formula",
+  "brew_cask",
+  "krew",
+  "mas",
+  "custom_commands",
+  "containers",
+  "rustup",
+]
+
+run_in_tmux = false
+set_title = false
+display_time = true
+cleanup = true
+
+[pre_commands]
+"Install Brewfile managed packages" = "brew bundle install --no-upgrade"
+
+[commands]
+"Brewfile Consistency Check" = "brew bundle cleanup --force"
+"Helm Charts Repos Update" = "helm repo update"
