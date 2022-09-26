@@ -28,6 +28,10 @@ alias lla='exa --long --group --git --all'
 
 # shorties
 alias k='kubectl'
+alias g='git'
+alias tg='topgrade'
+alias cz='chezmoi'
+alias czd='chezmoi cd'
 
 # linux compatibility
 alias ldd='otool -L'
