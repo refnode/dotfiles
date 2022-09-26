@@ -56,6 +56,8 @@ path=(
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   /usr/local/opt/go@1.17/bin
+  $HOME/.krew/bin
+  $HOME/.cargo/bin
   $HOME/.npm-packages/bin
   $HOME/.rd/bin
   $DOTFILES/bin
