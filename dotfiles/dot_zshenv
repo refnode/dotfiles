@@ -14,6 +14,10 @@ export DOTFILES="${HOME}/.dotfiles"
 # Define ZDOTDIR to keep the majority of zsh config out of users home root
 export ZDOTDIR="${HOME}/.config/zsh"
 
+# Define GNUGPHOME and use gpg-agent as ssh-agent
+export GNUPGHOME="${HOME}/.gnupg"
+# export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+
 # On my workplaces I use podman.
 # Set DOCKER_HOST to the default podman machine socket.
 export DOCKER_HOST="unix://${HOME}/.local/share/containers/podman/machine/podman-machine-default/podman.sock"
