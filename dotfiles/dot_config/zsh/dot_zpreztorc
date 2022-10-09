@@ -40,7 +40,7 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'osx' \
   'tmux' \
-  'ssh' \
+  'gpg' \
   'completion' \
   'fasd' \
   'direnv' \
