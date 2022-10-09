@@ -1,0 +1,293 @@
+###
+### target dir for cask apps
+# TODO: verify valid arg --no-quarantine
+cask_args appdir: "/Applications", require_sha: true
+
+tap "homebrew/cask" || true
+tap "homebrew/cask-fonts" || true
+tap "neovim/neovim" || true
+tap "remotemobprogramming/brew" || true
+tap "federico-terzi/espanso" || true
+tap "fluxcd/tap" || true
+tap "cloudquery/tap" || true
+tap "int128/kubelogin" || true
+
+# homebrew core helper tools
+# mas is required early to install xcode and more later from the app store
+brew "mas"
+
+### font packages
+cask "font-inconsolata"
+cask "font-inconsolata-dz-for-powerline"
+cask "font-inconsolata-for-powerline"
+cask "font-inconsolata-for-powerline-bold"
+cask "font-inconsolata-g-for-powerline"
+cask "font-inconsolata-g"
+cask "font-inconsolata-go-nerd-font"
+cask "font-inconsolata-nerd-font"
+cask "font-inconsolata-lgc"
+cask "font-inconsolata-lgc-nerd-font"
+cask "font-meslo-for-powerline"
+cask "font-meslo-lg"
+cask "font-meslo-lg-dz"
+cask "font-meslo-lg-nerd-font"
+cask "font-hack-nerd-font"
+
+### common shell tool replacements
+brew "bat"
+brew "exa"
+brew "ripgrep"
+brew "fd"
+
+### zsh
+brew "zsh"
+brew "zsh-completions"
+brew "zplug"
+brew "powerline-go"
+
+### neovim
+brew "neovim"
+brew "yaml-language-server"
+brew "bash-language-server"
+brew "lua-language-server"
+brew "pyright"
+brew "vifm"
+
+### task management
+brew "task"
+brew "taskwarrior-tui"
+
+### mail tools
+brew "neomutt"
+
+### common cli tools
+brew "tmux"
+brew "reattach-to-user-namespace"
+brew "smug"
+brew "macos-term-size"
+brew "tccutil"
+brew "tag"
+brew "iproute2mac"
+brew "mitmproxy"
+brew "xz"
+brew "fzf"
+brew "jq"
+brew "pwgen"
+brew "coreutils"
+brew "socat"
+brew "websocat"
+brew "htop"
+brew "shellcheck"
+brew "yq"
+brew "shfmt"
+brew "direnv"
+brew "sqlite"
+brew "wget"
+brew "watch"
+brew "midnight-commander"
+brew "colordiff"
+brew "go-jira"
+brew "age"
+brew "age-plugin-yubikey"
+brew "sops"
+cask "osquery"
+brew "graphviz"
+brew "exiftool"
+brew "devd"
+brew "glow"
+brew "pass"
+brew "gopass"
+brew "gopass-jsonapi"
+cask "gopass-ui"
+brew "tree"
+brew "topgrade"
+brew "terminal-notifier"
+brew "qrencode"
+brew "gotop"
+brew "cloudquery/tap/cloudquery"
+
+### local hypervisor / container systems
+brew "docker"
+brew "docker-credential-helper"
+brew "docker-credential-helper-ecr"
+brew "hyperkit"
+cask "rancher"
+brew "minikube"
+brew "kind"
+brew "podman"
+
+### cloud tools
+brew "awscli"
+brew "aws-cdk"
+cask "google-cloud-sdk"
+
+### kubernetes tools
+brew "kubernetes-cli"
+brew "krew"
+brew "kubectx"
+brew "kubeconform"
+brew "kustomize"
+brew "k9s"
+brew "int128/kubelogin/kubelogin"
+brew "helm"
+brew "skopeo"
+brew "skaffold"
+brew "kubebuilder"
+brew "openshift-cli"
+brew "fluxcd/tap/flux"
+brew "kube-linter"
+brew "stern"
+brew "dive"
+brew "k6"
+brew "sonobuoy"
+brew "k3d"
+
+### dev tools general
+# mas "Xcode", id: 497799835
+brew "git"
+brew "git-annex"
+brew "git-delta"
+brew "tig"
+brew "lazygit"
+brew "pre-commit"
+brew "cookiecutter"
+brew "glab"
+brew "gh"
+brew "git-filter-repo"
+
+### bazel
+brew "bazelisk"
+brew "buildifier"
+
+### mob programming
+brew "remotemobprogramming/brew/mob"
+
+# go development
+brew "go@1.17"
+brew "goenv"
+brew "gopls"
+brew "protobuf"
+brew "goreleaser"
+
+# rust development
+brew "rustup-init"
+
+# lua development
+brew "lua@5.3"
+brew "stylua"
+brew "luarocks"
+
+# python development
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "python@3.9"
+brew "libpython-tabulate"
+
+# platformio development
+brew "platformio"
+
+### desktop and desktop productivity tools
+cask "google-chrome", args: { require_sha: false }
+cask "brave-browser"
+cask "qutebrowser"
+cask "keepassxc"
+cask "alacritty"
+cask "amazon-chime"
+cask "vlc"
+cask "xmind"
+cask "slack"
+cask "deepl"
+cask "zoom"
+
+### desktop cloud / kubernetes / dev tools
+cask "github"
+cask "lens"
+cask "visual-studio-code"
+cask "tower"
+
+### desktop speedup tools
+brew "espanso"
+cask "hammerspoon"
+
+
+### Mac App Store
+#mas "Rocket.Chat (3.8.4)", id: 1086818840
+
+# to be reviewed, commented, optional cleanup
+brew "apr"
+brew "apr-util"
+brew "assimp"
+brew "autoconf"
+brew "brotli"
+brew "c-ares"
+brew "colormake"
+brew "dbus"
+brew "double-conversion"
+brew "freetype"
+brew "gdbm"
+brew "gettext"
+brew "glib"
+brew "gmp"
+brew "hunspell"
+brew "icu4c"
+brew "isl"
+brew "jasper"
+brew "jemalloc"
+brew "jpeg"
+brew "jsonlint"
+brew "krb5"
+brew "libb2"
+brew "libev"
+brew "libevent"
+brew "libffi"
+brew "libmpc"
+brew "libnet"
+brew "libpng"
+brew "libproxy"
+brew "libssh2"
+brew "libtiff"
+brew "libuv"
+brew "libyaml"
+brew "lz4"
+brew "m4"
+brew "mpdecimal"
+brew "mpfr"
+brew "ncurses"
+brew "nghttp2"
+brew "node"
+brew "node@14"
+brew "oniguruma"
+brew "openssl@1.1"
+brew "openssl@3"
+brew "pcre"
+brew "pcre2"
+brew "pkg-config"
+brew "postgresql@14"
+brew "qt"
+brew "qt-postgresql"
+brew "readline"
+brew "s-lang"
+brew "six"
+brew "tcl-tk"
+brew "tcptraceroute"
+brew "utf8proc"
+brew "wdiff"
+brew "webp"
+brew "yamllint"
+brew "yarn"
+brew "zstd"
+brew "opam"
+brew "gpatch"
+brew "pkg-config"
+brew "dune"
+brew "dylibbundler"
+brew "libtool"
+brew "automake"
+brew "zk"
+cask "skim"
+brew "ffmpeg"
+
+
+brew "starship"
+brew "pinentry-mac"
+cask "gpg-suite"
