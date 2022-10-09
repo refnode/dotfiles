@@ -17,8 +17,9 @@ display_time = true
 cleanup = true
 
 [pre_commands]
-"Install Brewfile managed packages" = "brew bundle install --no-upgrade"
+"Generate Brewfile" = "${HOME}/bin/ref-gen-brewfile"
+"Install Brewfile managed packages" = "brew bundle install --no-upgrade --file=${HOME}/.config/brew/Brewfile"
 
 [commands]
-"Brewfile Consistency Check" = "brew bundle cleanup --force"
+"Brewfile Consistency Check" = "brew bundle cleanup --force --file=${HOME}/.config/brew/Brewfile"
 "Helm Charts Repos Update" = "helm repo update"
