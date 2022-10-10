@@ -25,11 +25,6 @@ export DOCKER_HOST="unix://${HOME}/.local/share/containers/podman/machine/podman
 # To use kind with podman, the env var must be present.
 export KIND_EXPERIMENTAL_PROVIDER=podman
 
-# If present source a workspace local zshenv file.
-if [ -s "${HOME}/.zshenv.local" ]; then
-    source "${HOME}/.zshenv.local"
-fi
-
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
