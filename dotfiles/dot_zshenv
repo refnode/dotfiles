@@ -22,6 +22,9 @@ export GNUPGHOME="${HOME}/.gnupg"
 # Set DOCKER_HOST to the default podman machine socket.
 export DOCKER_HOST="unix://${HOME}/.local/share/containers/podman/machine/podman-machine-default/podman.sock"
 
+# To use kind with podman, the env var must be present.
+export KIND_EXPERIMENTAL_PROVIDER=podman
+
 # If present source a workspace local zshenv file.
 if [ -s "${HOME}/.zshenv.local" ]; then
     source "${HOME}/.zshenv.local"
