@@ -190,6 +190,7 @@ brew "platformio"
 cask "google-chrome", args: { require_sha: false }
 cask "brave-browser"
 cask "qutebrowser"
+cask "vivaldi"
 cask "keepassxc"
 cask "alacritty"
 cask "amazon-chime"
