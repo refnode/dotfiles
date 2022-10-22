@@ -27,6 +27,7 @@ alias ll='exa --long --group --git'
 alias lla='exa --long --group --git --all'
 
 # shorties
+alias pm='podman'
 alias k='kubectl'
 alias g='git'
 alias tg='topgrade'
