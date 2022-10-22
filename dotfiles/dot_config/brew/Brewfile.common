@@ -45,6 +45,10 @@ brew "zsh-completions"
 brew "zplug"
 brew "powerline-go"
 
+### gnupg tooling
+brew "gnupg"
+brew "pinentry-mac"
+
 ### neovim
 brew "neovim"
 brew "yaml-language-server"
@@ -290,5 +294,3 @@ brew "ffmpeg"
 
 
 brew "starship"
-brew "pinentry-mac"
-cask "gpg-suite"
