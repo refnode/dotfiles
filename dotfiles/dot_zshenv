@@ -16,7 +16,6 @@ export ZDOTDIR="${HOME}/.config/zsh"
 
 # Define GNUGPHOME and use gpg-agent as ssh-agent
 export GNUPGHOME="${HOME}/.gnupg"
-# export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 # On my workplaces I use podman.
 # Set DOCKER_HOST to the default podman machine socket.
