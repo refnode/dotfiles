@@ -295,3 +295,4 @@ brew "ffmpeg"
 
 
 brew "starship"
+brew "fswatch"
