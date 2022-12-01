@@ -43,3 +43,6 @@ vim.g.maplocalleader = ","
 if require "refnode.bootstrap".bootstrap() then
   return
 end
+
+-- load the plugin definitions
+require "refnode.plugins"
