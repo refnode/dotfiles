@@ -47,5 +47,12 @@ return packer.startup{
       "tpope/vim-repeat",
       commit = "24afe922e6a05891756ecf331f39a1f6743d3d5a",
     }
+    use {
+      'numToStr/Comment.nvim',
+      commit = "5f01c1a89adafc52bf34e3bf690f80d9d726715d",
+      config = function()
+        require('Comment').setup()
+      end
+    }
   end
 }
