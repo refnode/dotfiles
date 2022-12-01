@@ -39,5 +39,13 @@ return packer.startup{
       "nvim-lua/popup.nvim",
       commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac",
     }
+    use {
+      "tpope/vim-surround",
+      commit = "aeb933272e72617f7c4d35e1f003be16836b948d",
+    }
+    use {
+      "tpope/vim-repeat",
+      commit = "24afe922e6a05891756ecf331f39a1f6743d3d5a",
+    }
   end
 }
