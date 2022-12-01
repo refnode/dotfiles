@@ -59,5 +59,12 @@ return packer.startup{
       commit = "956d67c88512b91c2938da3a9e0aeeea2b82cd0b",
       keys = { "gJ", "gS" },
     }
+    use {
+      "mhinz/vim-startify",
+      commit = "81e36c352a8deea54df5ec1e2f4348685569bed2",
+      config = function()
+        vim.g.startify_disable_at_vimenter = false
+      end,
+    }
   end
 }
