@@ -31,5 +31,13 @@ return packer.startup{
       "wbthomason/packer.nvim",
       commit = "dcd2f380bb49ec2dfe208f186236dd366434a4d5",
     }
+    use {
+      "nvim-lua/plenary.nvim",
+      commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7",
+    }
+    use {
+      "nvim-lua/popup.nvim",
+      commit = "b7404d35d5d3548a82149238289fa71f7f6de4ac",
+    }
   end
 }
