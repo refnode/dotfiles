@@ -38,3 +38,8 @@
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+
+-- run the bootstrapping on new workplaces
+if require "refnode.bootstrap".bootstrap() then
+  return
+end
