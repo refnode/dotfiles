@@ -54,5 +54,10 @@ return packer.startup{
         require('Comment').setup()
       end
     }
+    use {
+      "AndrewRadev/splitjoin.vim",
+      commit = "956d67c88512b91c2938da3a9e0aeeea2b82cd0b",
+      keys = { "gJ", "gS" },
+    }
   end
 }
