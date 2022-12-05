@@ -1,0 +1,32 @@
+### taskwarrior configuration file
+###
+### file ~/.config/task/taskrc
+
+### location of data and hooks
+data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
+
+# Color theme (uncomment one to use)
+#include light-16.theme
+#include light-256.theme
+#include dark-16.theme
+#include dark-256.theme
+#include dark-red-256.theme
+#include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+#include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+regex=on
+search.case.sensitive=yes
+
+### Context definitions for more focus
+context.company.read=project:company
+context.company.write=project:company
+context.personal.read=project:personal
+context.personal.write=project:personal
