@@ -29,7 +29,7 @@ repos:
       - id: shfmt
 
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.15.2
+    rev: v0.15.3
     hooks:
       - id: stylua-system
 
