@@ -119,6 +119,9 @@ cask "rancher"
 brew "minikube"
 brew "kind"
 brew "podman"
+brew "lima"
+brew "colima"
+brew "dnsmasq"
 
 ### cloud tools
 brew "awscli"
