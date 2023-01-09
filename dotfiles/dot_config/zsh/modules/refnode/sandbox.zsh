@@ -41,3 +41,23 @@ fzf-kubectl-get-pods-widget() {
 zle -N fzf-kubectl-get-pods-widget
 bindkey -M vicmd ' kgp' fzf-kubectl-get-pods-widget
 bindkey -M viins ' kgp' fzf-kubectl-get-pods-widget
+
+
+refnode-bookmark-widget() {
+  local cmd="cat $HOME/bookmarks.yaml | yq '.bookmarks[].url'" setopt localoptions pipefail no_aliases 2> /dev/null
+  local item="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
+  if [[ -z "$item" ]]; then
+    zle redisplay
+    return 0
+  fi
+  zle push-line # Clear buffer. Auto-restored on next prompt.
+  BUFFER="open ${(q)item}"
+  zle accept-line
+  local ret=$?
+  unset item # ensure this doesn't end up appearing in prompt expansion
+  zle reset-prompt
+  return $ret
+}
+zle -N refnode-bookmark-widget
+bindkey -M viins ' fb' refnode-bookmark-widget
+bindkey -M vicmd ' fb' refnode-bookmark-widget
