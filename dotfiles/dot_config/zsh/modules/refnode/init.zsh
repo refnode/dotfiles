@@ -11,6 +11,9 @@ pmodload 'helper'
 # source fzf keybindings
 source "$(brew --prefix fzf)/shell/key-bindings.zsh"
 
+# initialize goenv
+eval "$(goenv init -)"
+
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins ' fh' fzf-history-widget
 bindkey -M vicmd ' fh' fzf-history-widget
