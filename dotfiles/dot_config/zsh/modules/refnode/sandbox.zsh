@@ -3,7 +3,7 @@
 
 # jump to git projects the fzf style
 fzf-git-widget() {
-  local cmd="find $HOME/src -name .git -type d -maxdepth 6 | sed -e 's/\/\.git//'" setopt localoptions pipefail no_aliases 2> /dev/null
+  local cmd="fd '.git$' $HOME/src --type directory --max-depth=6 --hidden | sed -e 's/\.git\/$//'" setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
   if [[ -z "$dir" ]]; then
     zle redisplay
