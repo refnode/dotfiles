@@ -298,3 +298,10 @@ brew "ffmpeg"
 
 # brew "starship" # managed by cargo
 brew "fswatch"
+
+# mail processing"
+brew "isync"
+brew "msmtp"
+brew "ripmime"
+brew "pdfgrep"
+brew "w3m"
