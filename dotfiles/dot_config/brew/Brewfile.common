@@ -194,6 +194,7 @@ brew "libpython-tabulate"
 brew "platformio"
 
 ### desktop and desktop productivity tools
+cask "balenaetcher", args: { require_sha: false } 
 cask "google-chrome", args: { require_sha: false }
 cask "brave-browser"
 cask "qutebrowser"
